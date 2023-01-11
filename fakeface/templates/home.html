@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="{% static '/css/all.min.css' %}">
+      <style>
+        body{
+            background-image:url('/static/rashid.jpg');
+        }
+    
+     #s1{
+         padding:11px;
+         color:white;
+         text-decoration: none;
+         
+     }
+     .res{
+         border:2px;
+          width:1500px;
+          height:224px;
+         
+          
+       
+          background-size:cover;
+        
+        
+
+     }
+   
+     h2{
+         text-align: center;
+        margin-right: 333px;
+        margin-top: 55px;
+         color:white;
+     }
+    
+     
+     #up{background-color: blueviolet;
+         margin-top: 111px;
+         margin-left: 171px;
+         color:white;
+         text-decoration:none;
+         padding: 11px;
+
+     }
+     .vs{
+         margin-left: 955px;
+         
+
+     }
+     .results{
+         margin-left: 955px;
+     }
+     #result{
+         text-decoration:none;
+         background-color: green;
+         padding: 11px;
+         text-decoration: none;
+         color:white;
+
+
+     }
+     #real{
+         background-color: green;
+         padding:22px;
+         border-radius: 44px;
+         text-decoration: none;
+         color:white;
+     }
+     #fake{
+         background-color:red;
+         padding:22px;
+         border-radius: 44px;;
+         text-decoration: none;
+         color:white;
+     #bt{
+       margin-left:111px;
+     }
+      </style>
+</head>
+<body> 
+  <div class="wo">
+    <a href="#" id="s1">Home</a>
+   
+    <a href="/about" id="s1">About</a>
+    <a href="/contact"id="s1">Contact</a>
+    <h2>Well Come</h2>
+    <h2>Fake Face Detection</h2>
+</div>
+
+{{predictions}}
+
+
+    <div class="results">
+        <a href="" id="result">Results</a>
+
+
+    </div>
+    <h1>How its work</h1>
+<p>click on "Upload Image" button select Your Image you want to check 
+  after that wait for result system detect using AI</p>
+  <img src="{{ filePathName}}" alt="" style="width:400px;height:244px;">
+{{filePathName}}
+    <div class="vs"><br>
+      
+        <a href="" id="real">Real{{rest}}</a>
+       
+        <a href="" id="fake">Fake{{rests}}</a><br>
+    </div>
+    <vr>
+
+    </div>
+
+
+
+      <script  src="{% static 'js/jquery.min.js' %}"></script>
+  
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/all.min.js' %}"></script>
+      
+</body>
+</html>

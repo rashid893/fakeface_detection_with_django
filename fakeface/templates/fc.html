@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>fake Face detection</h2>
+    <form action="/face/" enctype='multipart/form-data' method='post'>
+        {% csrf_token %}
+        <input type="file" name ="myfile">
+        <input type="submit"  id='bt'value="submit" class="btn btn-primary">
+      </form>
+      <img src="{{  filePathName}}" alt="" style="width:400px;height:244px;">
+      {{filePathName}}
+
+      
+      
+    
+</body>
+</html>
